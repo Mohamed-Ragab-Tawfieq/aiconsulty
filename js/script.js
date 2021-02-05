@@ -29,13 +29,13 @@ $(".btn-close, .screen-overlay").click(function (e) {
 $('#navbar_main a').css('color', '#fff');
 $('#navbar_main a').css('padding-top', '20px');
 $('#navbar_main a').css('padding-bottom', '20px');
-$('#navbar_main .nav-link').click(function() {
+$('#navbar_main .nav-link').click(function () {
   $(this).find('.bi-chevron-down').toggleClass('rotate');
 });
-$(".training > a:first").mouseenter(function() {
+$(".training > a:first").mouseenter(function () {
   $(".nested2").css('display', 'block');
 });
-$(".training > a:first").mouseleave(function() {
+$(".training > a:first").mouseleave(function () {
   $(".nested2").css('display', 'none');
 });
 
@@ -135,6 +135,29 @@ $('.solutions #carousel-example').on('slide.bs.carousel', function (e) {
 //     next.children(':first-child').clone().appendTo($(this));
 //   }
 // });
+
+
+// ------ stay-in-touch section
+let button = document.querySelector('.stay .button');
+let buttonText = document.querySelector('.stay .tick');
+
+const tickMark = "<svg width=\"35\" height=\"35\" viewBox=\"-12 -5 65 60\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#fff\" fill-rule=\"nonzero\" d=\"M19.11 44.64L.27 25.81l5.66-5.66 13.18 13.18L52.07.38l5.65 5.65\"/></svg>";
+
+buttonText.innerHTML = "Submit";
+
+button.addEventListener('click', function () {
+  if ($('.stay .swing').val().length > 0) {
+    if (buttonText.innerHTML !== "Submit") {
+      buttonText.innerHTML = "Submit";
+    } else if (buttonText.innerHTML === "Submit") {
+      buttonText.innerHTML = tickMark;
+    }
+    this.classList.toggle('button__circle');
+    $('.stay .has-error').addClass('invisible');
+  } else {
+    $('.stay .has-error').removeClass('invisible');
+  }
+});
 
 
 // -------------- clients section
