@@ -406,10 +406,44 @@ select {
 
 // --------------- solutions section ------------------
 .solutions {
-  img {
-    height: 300px;
-    min-width: 100% !important;
+  a {
+    z-index: 1500;
+    img {
+      height: 300px;
+      min-width: 100% !important;
+    }
+    .over {
+      position: absolute;
+      left: 15px;
+      right: 0;
+      top: 0;
+      width: 90%;
+      // height: 100%;
+      // height: 200px;
+      z-index: 3;
+      background: rgba(0, 0, 0, 0.3);
+    }
+    h3 {
+      position: absolute;
+      top: 190px;
+      max-width: 100%;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 0 20px;
+      z-index: 4;
+    }
+    span.text {
+      position: absolute;
+      top: 230px;
+      line-height: 18px;
+      // left: 50%;
+      // transform: translateX(-50%);
+      padding: 0 20px;
+      color: $white;
+      z-index: 4;
+    }
   }
+
   .bi {
     font-size: 30px;
     padding: 0 10px;
@@ -443,7 +477,7 @@ select {
       border-radius: 5px;
       background-color: rgba(192, 226, 24, 0.01);
       overflow: hidden;
-      z-index: 1;
+      z-index: 5;
     }
   }
 }
@@ -523,7 +557,7 @@ select {
 @media (min-width: 768px) {
   /* show 3rd of 3 item slide */
   .solutions {
-    .carousel-inner .active + .carousel-item + .carousel-item {
+    .carousel-inner .active + .carousel-item + .carousel-item  {
       display: block;
     }
     .carousel-inner
@@ -629,27 +663,27 @@ select {
     padding: 10px 0 10px 15px;
     // font-family: "Open Sans", sans;
     font-weight: 400;
-    color: #377D6A;
+    color: #377d6a;
     background: $bage;
     border: 0;
     border-radius: 3px;
     outline: 0;
     text-indent: 60px; // Arbitrary.
-    transition: all .3s ease-in-out;
-    
+    transition: all 0.3s ease-in-out;
+
     &::-webkit-input-placeholder {
       color: #efefef;
       text-indent: 0;
       font-weight: 300;
     }
-  
+
     + label {
       display: inline-block;
       position: absolute;
       top: 0;
       left: 0;
       padding: 10px 15px;
-      text-shadow: 0 1px 0 rgba(19,74,70,.4);
+      text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
       background: $darkblue;
       color: $semi-white;
       border-top-left-radius: 3px;
@@ -657,7 +691,7 @@ select {
       transform-origin: 2px 2px;
       transform: rotate(0);
       // There should be a better way
-      animation: swing-back .4s 1 ease-in-out;
+      animation: swing-back 0.4s 1 ease-in-out;
     }
   }
   @keyframes swing {
@@ -690,12 +724,12 @@ select {
   }
   .swing:focus,
   .swing:active {
-    color: #377D6A;
+    color: #377d6a;
     text-indent: 0;
     background: #fff;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    
+
     &::-webkit-input-placeholder {
       color: #aaa;
     }
@@ -710,14 +744,14 @@ select {
     margin: 20px auto;
     background: $lightblue;
     border-radius: 6px;
-    transition: all .3s cubic-bezier(0.67, 0.17, 0.40, 0.83);
+    transition: all 0.3s cubic-bezier(0.67, 0.17, 0.4, 0.83);
   }
-  
+
   .button svg {
     transform: rotate(180deg);
-    transition: all .5s;
+    transition: all 0.5s;
   }
-  
+
   .button__circle {
     width: 50px;
     height: 40px;
@@ -725,16 +759,16 @@ select {
     border-radius: 50%;
     transform: rotate(-180deg);
   }
-  
+
   .button:hover {
     cursor: pointer;
   }
-  
+
   .tick {
     color: white;
     margin: 5px auto !important;
     font-size: 1.5em;
-    transition: all .9s;
+    transition: all 0.9s;
   }
 }
 // --------- end of stay-in-touch section --------------------

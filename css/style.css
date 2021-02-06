@@ -396,9 +396,42 @@ select:focus {
 }
 
 /* ########################################################### */
-.solutions img {
+.solutions a {
+  z-index: 1500;
+}
+
+.solutions a img {
   height: 300px;
   min-width: 100% !important;
+}
+
+.solutions a .over {
+  position: absolute;
+  left: 15px;
+  right: 0;
+  top: 0;
+  width: 90%;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.solutions a h3 {
+  position: absolute;
+  top: 190px;
+  max-width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 20px;
+  z-index: 4;
+}
+
+.solutions a span.text {
+  position: absolute;
+  top: 230px;
+  line-height: 18px;
+  padding: 0 20px;
+  color: #fff;
+  z-index: 4;
 }
 
 .solutions .bi {
@@ -444,7 +477,7 @@ select:focus {
   border-radius: 5px;
   background-color: rgba(192, 226, 24, 0.01);
   overflow: hidden;
-  z-index: 1;
+  z-index: 5;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -617,14 +650,14 @@ select:focus {
   width: 100%;
   padding: 10px 0 10px 15px;
   font-weight: 400;
-  color: #377D6A;
+  color: #377d6a;
   background: #efefef;
   border: 0;
   border-radius: 3px;
   outline: 0;
   text-indent: 60px;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .stay .swing::-webkit-input-placeholder {
@@ -648,8 +681,8 @@ select:focus {
           transform-origin: 2px 2px;
   -webkit-transform: rotate(0);
           transform: rotate(0);
-  -webkit-animation: swing-back .4s 1 ease-in-out;
-          animation: swing-back .4s 1 ease-in-out;
+  -webkit-animation: swing-back 0.4s 1 ease-in-out;
+          animation: swing-back 0.4s 1 ease-in-out;
 }
 
 @-webkit-keyframes swing {
@@ -730,7 +763,7 @@ select:focus {
 
 .stay .swing:focus,
 .stay .swing:active {
-  color: #377D6A;
+  color: #377d6a;
   text-indent: 0;
   background: #fff;
   border-top-left-radius: 0;
@@ -763,8 +796,8 @@ select:focus {
 .stay .button svg {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .stay .button__circle {
@@ -784,8 +817,8 @@ select:focus {
   color: white;
   margin: 5px auto !important;
   font-size: 1.5em;
-  -webkit-transition: all .9s;
-  transition: all .9s;
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
 }
 
 /* ########################################################### */
